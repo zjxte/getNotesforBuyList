@@ -1,0 +1,5 @@
+'Vlookup from a closed worksheet
+
+dim myFile as string
+myFile = CStr(Environ("USERPROFILE")) & "\Documents\[ProductNotes-Search.xlsx]ProductNotes-Search"
+ws.Range("G" & i).FormulaR1C1 = ("=IFERROR(VLOOKUP(RC[-5],'" & myFile & "'!R2C2:R65536C4,2,0),""/"")")
